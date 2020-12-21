@@ -3,6 +3,7 @@ const app = express()
 const bodyParser = require('body-parser')
 const path = require('path')
 const mongoose = require('mongoose')
+const port = process.env.PORT || 3000;
 require('./Employee')
 
 
@@ -87,6 +88,6 @@ app.post('/update',(req,res)=>{
     })
 })
 
-app.listen(3000,()=>{
-    console.log("server running")
+app.listen(port,()=>{
+    console.log("server running On "+port)
 })
